@@ -1,0 +1,26 @@
+{
+  "name": "cssDesk",
+  "version": "0.1.0",
+  "authors": [
+    "r4m <r4mkum4r.r@gmail.com>",
+    "sagar <sagar.se@gmail.com>"
+  ],
+  "description": "CSS playground for modern WEB",
+  "main": "dist/index.html",
+  "keywords": [
+    "css3",
+    "modern web"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.3.10",
+    "reveal.js": "~3.0.0"
+  }
+}
