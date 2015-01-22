@@ -94,7 +94,10 @@ textarea {
    ========================================================================== */
 
 
-
+[data-type="heading"].highlight{
+    color: crimson;
+    text-shadow: 0px 0px 6px crimson;
+}
 
 
 
