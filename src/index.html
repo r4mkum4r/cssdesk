@@ -30,11 +30,82 @@
                 </section>
 
                 <section>
-                    <h2>Flexbox</h2>
-                    <p>
-                        
-                    </p>
+                    <section>
+                        <h2>Flexbox</h2>
+                        <div>
+                            <img src="img/flex_terms.png" alt="flexbox">
+                        </div>
+                    </section>
+                    <section>
+                        <h2 data-type="heading" class='highlight'>Flexbox - Terms</h2>
+                        <div>
+                            <ul>
+                                <li>Flex Container</li>
+                                <li>Flex Item</li>
+                                <li>Direction</li>
+                                <li>Dimensions</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="direction">
+                        <h2 data-type="heading" class="highlight">Direction</h2>
+                        <ul>
+                            <li>flex-direction (main-axis)</li>
+                        </ul>
+                        <div>
+<pre>
+.flex-container{
+    flex-direction: <select ng-model="flexDirection" ng-options="direction for direction in flexDirections "></select> ;
+}
+</pre>
+                        </div>
+                        <div class="flex-container box-container" ng-style="directionStyle">
+                            <div class="box flex-item" >One</div>
+                            <div class="box flex-item" >Two</div>
+                            <div class="box flex-item" >Three</div> 
+                        </div>
+                    </section>
+                    <section class="direction">
+                        <h2 data-type="heading" class="highlight">Direction</h2>
+                        <ul>
+                            <li>align-items (cross-axis)</li>
+                        </ul>
+                        <div>
+<pre>
+.flex-container{
+    align-items: <select ng-model="alignItem" ng-options="align for align in alignItems "></select> ;
+}
+</pre>
+                        </div>
+                        <div class="flex-container box-container" ng-style="alignStyle">
+                            <div class="box flex-item">One</div>
+                            <div class="box flex-item">Two</div>
+                            <div class="box flex-item">Three</div> 
+                        </div>
+                    </section>
+                    <section class="direction">
+                        <h2 data-type="heading" class="highlight">Direction</h2>
+                        <ul>
+                            <li>flex-direction (main-axis)</li>
+                            <li>align-items (cross-axis)</li>
+                        </ul>
+                        <div>
+<pre>
+.flex-container{
+    align-items: <select ng-model="directionContainer.alignItem" ng-options="align for align in alignItems "></select> ;
+    flex-direction: <select ng-model="directionContainer.flexDirection" ng-options="direction for direction in flexDirections "></select> ;
+}
+</pre>
+                        </div>
+                        <div class="flex-container box-container" ng-style="directionContainerStyle">
+                            <div class="box flex-item">One</div>
+                            <div class="box flex-item">Two</div>
+                            <div class="box flex-item">Three</div> 
+                        </div>
+                    </section>
                 </section>
+
+                
 
             </div>
 

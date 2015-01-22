@@ -93,14 +93,47 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+*{
+    font-size: 0.9em;
+}
+
 
 [data-type="heading"].highlight{
     color: crimson;
     text-shadow: 0px 0px 6px crimson;
 }
 
+div.flex-container{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+
+    box-sizing: border-box;
+
+    width: 865px;
+    height: 350px;
+
+    margin-left: 50px;
+
+    background: #d7d7d7;
+
+    -webkit-animation: all 1000ms;
+    animation: all 1000ms;
 
 
+}
+
+div.box{
+    background: cornflowerblue;
+    margin: 0 10px;
+
+    font-size: 0.9em;
+
+    -webkit-animation: all 1000ms;
+    animation: all 1000ms;
+}
 
 
 
