@@ -3,6 +3,7 @@ ng.module 'cssdesk.controllers'
 
       $scope.flexDirections = ['row', 'row-reverse', 'column', 'column-reverse']
       $scope.alignItems = ['flex-start', 'flex-end', 'center', 'baseline', 'stretch']
+      $scope.jcs = ['flex-start', 'flex-end', 'center', 'space-around', 'space-between']
 
       # DEFAULT VALUES
 
@@ -11,18 +12,24 @@ ng.module 'cssdesk.controllers'
       $scope.directionContainer = 
         'flexDirection' : $scope.flexDirections[0]
         'alignItem' : $scope.alignItems[0]
+        'justify' : $scope.jcs[0]
+      $scope.justify = $scope.jcs[0]
 
 
       # STYLES
 
       $scope.directionStyle = 
-        'flex-direction' : 'row'
+        'flex-direction' : $scope.flexDirections[0]
       $scope.alignStyle = 
-        'align-items' : 'flex-start'
+        'align-items' : $scope.alignItems[0]
 
       $scope.directionContainerStyle = 
-        'flex-direction' : 'row'
-        'align-items' : 'flex-start'
+        'flex-direction' : $scope.flexDirections[0]
+        'align-items' : $scope.alignItems[0]
+        'justify-content' : $scope.jcs[0]
+
+      $scope.justifyStyle = 
+        'justify-content' : $scope.jcs[0]
 
 
       links = [
@@ -38,6 +45,10 @@ ng.module 'cssdesk.controllers'
         {
           "style" : ["flex-direction", "align-items"]
           "value" : "directionStyle"
+        },
+        {
+          "style" : 'justify-content'
+          "value" : "justify"
         }
       ]
 
@@ -84,6 +95,14 @@ ng.module 'cssdesk.controllers'
         return if newVal is oldVal
 
         setStyle 'alignItem', newVal, $scope.alignStyle
+
+      $scope.$watch 'justify', (newVal, oldVal)->
+
+        return if newVal is oldVal
+
+        setStyle 'justify', newVal, $scope.justifyStyle
+
+      # COMBOS
 
       $scope.$watch 'directionContainer', (newVal, oldVal)->
 

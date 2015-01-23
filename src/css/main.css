@@ -128,6 +128,7 @@ div.flex-container{
 div.box{
     background: cornflowerblue;
     margin: 0 10px;
+    display: inline-block;
 
     font-size: 0.9em;
 

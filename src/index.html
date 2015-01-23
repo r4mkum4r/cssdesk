@@ -43,6 +43,7 @@
                                 <li>Flex Container</li>
                                 <li>Flex Item</li>
                                 <li>Direction</li>
+                                <li>Spacing</li>
                                 <li>Dimensions</li>
                             </ul>
                         </div>
@@ -94,6 +95,46 @@
 .flex-container{
     align-items: <select ng-model="directionContainer.alignItem" ng-options="align for align in alignItems "></select> ;
     flex-direction: <select ng-model="directionContainer.flexDirection" ng-options="direction for direction in flexDirections "></select> ;
+}
+</pre>
+                        </div>
+                        <div class="flex-container box-container" ng-style="directionContainerStyle">
+                            <div class="box flex-item">One</div>
+                            <div class="box flex-item">Two</div>
+                            <div class="box flex-item">Three</div> 
+                        </div>
+                    </section>
+                    <section class="direction">
+                        <h2 data-type="heading" class="highlight">Spacing</h2>
+                        <ul>
+                            <li>justify-content</li>
+                        </ul>
+                        <div>
+<pre>
+.flex-container{
+    justify-content: <select ng-model="justify" ng-options="jc for jc in jcs "></select> ;
+}
+</pre>
+                        </div>
+                        <div class="flex-container box-container" ng-style="justifyStyle">
+                            <div class="box flex-item">One</div>
+                            <div class="box flex-item">Two</div>
+                            <div class="box flex-item">Three</div> 
+                        </div>
+                    </section>
+                    <section class="direction">
+                        <h2 data-type="heading" class="highlight">Direction</h2>
+                        <ul>
+                            <li>flex-direction (main-axis)</li>
+                            <li>align-items (cross-axis)</li>
+                            <li>justify-content</li>
+                        </ul>
+                        <div>
+<pre>
+.flex-container{
+    align-items: <select ng-model="directionContainer.alignItem" ng-options="align for align in alignItems "></select> ;
+    flex-direction: <select ng-model="directionContainer.flexDirection" ng-options="direction for direction in flexDirections "></select> ;
+    justify-content: <select ng-model="directionContainer.justify" ng-options="jc for jc in jcs "></select> ;
 }
 </pre>
                         </div>
